@@ -4,7 +4,7 @@
  * @Author:
  * @Date: 2021-12-02 11:52:02
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-12-02 15:22:22
+ * @LastEditTime: 2021-12-02 15:38:45
  */
 /* 
     模块化
@@ -17,14 +17,22 @@
 const md = require('koa')
 const app = new md()
 app.use(async (ctx, next) => {
-    await next()
     ctx.response.type = 'text/html'
-    ctx.body = 'hello world'
-    console.log(ctx.req.headers)
+    ctx.body = 'hello world1'
+    await next()
 })
 app.use(async (ctx, next) => {
+    const start = new Date().getTime()
+    await next()
+    const ms = new Date().getTime() - start
+    // ctx.response.type = 'text/html'
+    // ctx.body = 'hello world2'
+    console.log(`Time:${ms}`)
+})
+app.use(async (ctx, next) => {
+    // await next()
     ctx.response.type = 'text/html'
-    ctx.body = 'hello world'
+    ctx.body = 'hello world3'
 })
 app.listen(3032)
 console.log('started at port:3032')
