@@ -1,10 +1,29 @@
 {
     "name": "node_project",
     "version": "1.0.0",
+    "description": "using koa",
+    "main": "index.js",
     "scripts": {
-        "start": "node ./src/koa.js"
+        "dev": "/src/koa.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jackluotong/node_project.git"
+    },
+    "keywords": [
+        "koa",
+        "node"
+    ],
+    "author": "william",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jackluotong/node_project/issues"
+    },
+    "homepage": "https://github.com/jackluotong/node_project#readme",
     "dependencies": {
-        "koa": "^2.13.4"
+        "koa": "2.13.4",
+        "koa-router": "10.1.1",
+        "koa-bodyparser": "4.3.0",
+        "fs": "0.0.1-security"
     }
 }
