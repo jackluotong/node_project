@@ -1,0 +1,10 @@
+{
+    "name": "node_project",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node ./src/koa.js"
+    },
+    "dependencies": {
+        "koa": "^2.13.4"
+    }
+}
