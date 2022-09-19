@@ -1,29 +1,42 @@
 {
-    "name": "node_project",
-    "version": "1.0.0",
-    "description": "using koa",
-    "main": "index.js",
-    "scripts": {
-        "dev": "/src/koa.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jackluotong/node_project.git"
-    },
-    "keywords": [
-        "koa",
-        "node"
-    ],
-    "author": "william",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/jackluotong/node_project/issues"
-    },
-    "homepage": "https://github.com/jackluotong/node_project#readme",
-    "dependencies": {
-        "koa": "2.13.4",
-        "koa-router": "10.1.1",
-        "koa-bodyparser": "4.3.0",
-        "fs": "0.0.1-security"
-    }
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "using koa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "/src/koa.js",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackluotong/node_project.git"
+  },
+  "keywords": [
+    "koa",
+    "node"
+  ],
+  "author": "william",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackluotong/node_project/issues"
+  },
+  "homepage": "https://github.com/jackluotong/node_project#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "koa": "2.13.4",
+    "koa-bodyparser": "4.3.0",
+    "koa-router": "10.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
